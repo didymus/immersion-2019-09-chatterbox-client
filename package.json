@@ -1,0 +1,17 @@
+{
+  "name": "chatterbox-client",
+  "private": true,
+  "description": "Build a component-based chat-client using jQuery",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "jquery": "^3.3.1",
+    "mocha": "^5.2.0",
+    "sinon": "^6.3.4",
+    "underscore": "^1.9.1"
+  },
+  "scripts": {
+    "test": "open ./TestRunner.html"
+  },
+  "author": "Hack Reactor <curriculum.team@hackreactor.com>",
+  "license": "UNLICENSED"
+}
