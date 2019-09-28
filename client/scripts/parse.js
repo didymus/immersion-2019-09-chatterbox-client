@@ -6,31 +6,31 @@ const Parse = {
     // TODO: Save a message to the server
     $.ajax({
       // This is the url you should use to communicate with the parse API server.
-      url: Parse.server,
+      url: this.server,
       type: 'POST',
       data: JSON.stringify(message),
       contentType: 'application/json',
-      success: (data) => {
-        //console.log('chatterbox: Message sent');
-        successCB;
-      },
-      error: (data) => {
+      success: successCB,
+      error: errorCB || function(error){
         // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
-        //console.error('chatterbox: Failed to send message', data);
-        errorCB;
-      },
+        console.error('chatterbox: Failed to send message', data);
+      }
     });
   },
 
-  readAll: function(successCB, errorCB = null) {
+  readAll: function(successCB, errorCB = null){
     // TODO: Get messages from server
     $.ajax({
       // This is the url you should use to communicate with the parse API server.
-      url: Parse.server,
+      url: this.server,
       type: 'GET',
       dataType: 'json',
+      data: 'order=-createdAt',
       success: successCB,
-      error: errorCB
+      error: errorCB || function(error){
+        // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
+        console.error('chatterbox: Failed to fetch messages', error);
+      }
     });
   },
 
