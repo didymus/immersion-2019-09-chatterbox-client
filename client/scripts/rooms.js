@@ -17,7 +17,23 @@ const Rooms = {
             callback(Rooms.items());
         },
 
+    update: function (messages, callback = () => { }) {
+        const length = Rooms._data.size;
 
+        _.chain(messages)
+            .pluck('roomname')
+            .uniq()
+            .each(room => Rooms._data.add(room));
+
+        if (Rooms.selected === null) {
+            // first room is default
+            Rooms.selected = Rooms._data.values().next().value;
+        }
+
+        if (Rooms._data.size !== length) {
+            callback(Rooms.items());
+        }
+    },
 };
 
 window.Rooms = Rooms;
