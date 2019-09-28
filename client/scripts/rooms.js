@@ -1,6 +1,5 @@
 const Rooms = {
-    const Rooms = {
-        
+
         _data: new Set,
         selected: 'lobby',
 
