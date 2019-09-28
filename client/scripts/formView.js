@@ -6,7 +6,7 @@ initialize: function(){
 FormView.$form.on('submit', FormView.handleSubmit);
 },
 
-handleSubmit: function(event) {
+handleSubmit: function(event){
 // Stop the browser from submitting the form
 event.preventDefault();
 //console.log('click!');
@@ -22,7 +22,7 @@ Messages.add(message, MessagesView.render);
 });
 },
 
-setStatus: function(active) {
+setStatus: function(active){
 const status = active ? 'true' : null;
 FormView.$form.find('input[type=submit]').attr('disabled', status);
 },

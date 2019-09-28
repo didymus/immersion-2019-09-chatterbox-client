@@ -16,7 +16,7 @@ App.fetch(App.stopSpinner);
 setInterval(App.fetch, 3000);
 },
 
-fetch: function(callback = () => { }) {
+fetch: function(callback = () => { }){
 Parse.readAll((data) => {
 // examine the response from the server request:
 //console.log(data);;
@@ -27,12 +27,12 @@ callback();
 });
 },
 
-startSpinner: function() {
+startSpinner: function(){
 App.$spinner.show();
 FormView.setStatus(true);
 },
 
-stopSpinner: function() {
+stopSpinner: function(){
 App.$spinner.fadeOut('fast');
 FormView.setStatus(false);
 },
