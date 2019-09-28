@@ -6,10 +6,11 @@ const App = {
 
   initialize: function() {
     App.username = window.location.search.substr(10);
-
+    
     FormView.initialize();
     RoomsView.initialize();
     MessagesView.initialize();
+  
 
     // Fetch initial batch of messages
     App.startSpinner();
@@ -21,7 +22,7 @@ const App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       console.log(data);;
-      MessageView.render();
+  
       callback();
     });
   },

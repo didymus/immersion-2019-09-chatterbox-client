@@ -5,7 +5,8 @@ const MessageView = {
       <div class="username"></div>
       <div></div>
     </div>
-  `)
+  `),
+
 
 };
 

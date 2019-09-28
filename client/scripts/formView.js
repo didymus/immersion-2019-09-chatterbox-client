@@ -5,7 +5,7 @@ const FormView = {
   initialize: function() {
     FormView.$form.on('submit', FormView.handleSubmit);
   },
-
+  
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();

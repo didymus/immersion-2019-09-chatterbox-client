@@ -24,7 +24,6 @@ const Parse = {
 
   readAll: function(successCB, errorCB = null) {
     // TODO: Get messages from server
-    //debugger;
     $.ajax({
       // This is the url you should use to communicate with the parse API server.
       url: Parse.server,

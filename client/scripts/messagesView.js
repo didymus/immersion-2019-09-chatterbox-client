@@ -7,17 +7,18 @@ const MessagesView = {
   },
 
   render: function() {
-    // let message = 'hi';
-    // this.$chats.append(message);
+
+    return;
   },
 
   renderMessage: function(message) {
-   //this.$chats.append(Messages);
-   console.log(message);
-  
+
+ this.$chats.prepend(MessageView.render({
+   username: message.username,
+   text: message.text,
+   roomname: message.roomname
+ }));
   }
-
-
 };
 
 window.MessagesView = MessagesView;
