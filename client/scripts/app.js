@@ -4,7 +4,7 @@ username: 'anonymous',
 
   initialize: function(){
     App.username = window.location.search.substr(10);
-
+    //Friends.initialize();
     FormView.initialize();
     RoomsView.initialize();
     MessagesView.initialize();
@@ -16,7 +16,7 @@ username: 'anonymous',
     setInterval(App.fetch, 3000);
   },
 
-  fetch: function(callback = () => { }){
+  fetch: function(callback = () => {}){
     Parse.readAll((data) => {
     // examine the response from the server request:
     //console.log(data);;

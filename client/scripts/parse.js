@@ -25,7 +25,8 @@ server: `http://parse.${window.CAMPUS}.hackreactor.com/chatterbox/classes/messag
     url: this.server,
     type: 'GET',
     dataType: 'json',
-    data: 'order=-createdAt',
+    // get the new messages
+    data: 'order=-createdAt', // this is stupid and I shouldn't have to do this // fix
     success: successCB,
     error: errorCB || function(error){
     // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
