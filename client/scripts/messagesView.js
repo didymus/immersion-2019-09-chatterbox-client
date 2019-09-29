@@ -21,8 +21,9 @@ $chats: $('#chats'),
 
   handleClick: function(event){
     const username = $(event.target).data('username');
-    if(username === undefined){ return; }
-      Friends.toggleStatus(username, MessagesView.render);
+    if(username === undefined){ 
+      return; 
+    } Friends.toggleStatus(username, MessagesView.render);
   },
 };
 
